@@ -144,6 +144,11 @@ test -e "${HOME}/do_not_commit.zsrhc" && source "${HOME}/do_not_commit.zsrhc"
 
 
 ######################################################################
+# Liquid Prompt
+# Only load Liquid Prompt in interactive shells, not from a script or from scp
+[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+
+######################################################################
 # Fuzzy finder 'fzf'
 
 # fcd - cd to selected directory
