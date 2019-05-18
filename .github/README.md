@@ -16,7 +16,7 @@ Then:
 git clone --bare git@github.com:yanickc/dotfiles.git $HOME/.dotfiles
 ```
 
-Set the flag showUntrackedFiles to no on this specific (local) repository:
+Set the flag showUntrackedFiles to `no` on this specific (local) repository:
 ```
 dotfiles config --local status.showUntrackedFiles no
 ```
@@ -49,7 +49,7 @@ xargs -I{} mv {} .config-backup/{}
 ```
 
 
-You're done, from now on you can now type config commands to add and update your dotfiles:
+You're done, from now on you can now type `dotfiles` commands to add and update your dotfiles:
 ```
 dotfiles status
 dotfiles add .vimrc
