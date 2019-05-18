@@ -13,7 +13,7 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 Then:
 ```
-git clone --bare <git-repo-url> $HOME/.dotfiles
+git clone --bare git@github.com:yanickc/dotfiles.git $HOME/.dotfiles
 ```
 
 Set the flag showUntrackedFiles to no on this specific (local) repository:
