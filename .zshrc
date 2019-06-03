@@ -23,9 +23,15 @@ export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="spaceship"
-# ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# ZSH_THEME="powerlevel9k"
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs newline)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+# POWERLEVEL9K_SHORTEN_DIR_LENGTH=10
+# POWERLEVEL9K_SHORTEN_STRATEGY=truncate_middle
+
 ZSH_THEME="frisk"
+
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -96,11 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=104'  # call to see all colors: spectrum_ls
 
-
-#export DB_NAME=legwork
-# Add them to launchctl to have them inside pycharm
-#launchctl setenv DB_NAME ${DB_NAME}
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -135,17 +136,13 @@ alias dk=docker
 
 
 # Store .dotfiles into Git. See https://www.atlassian.com/git/tutorials/dotfiles
+# and 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 ######################################################################
 # Settings not to be commited publicly
 test -e "${HOME}/do_not_commit.zsrhc" && source "${HOME}/do_not_commit.zsrhc"
 
-
-######################################################################
-# Liquid Prompt
-# Only load Liquid Prompt in interactive shells, not from a script or from scp
-[ -d ~/liquidprompt ] &&[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
 
 ######################################################################
 # Fuzzy finder 'fzf'
