@@ -8,18 +8,17 @@ fi
 
 # yanick
 # to fix pycharm terminal. It should load /etc/paths on macosx but it doesn't
-PATH=/usr/local/sbin:/usr/local/bin:/Users/yanick/anaconda3/bin:$PATH:/Users/yanick/Documents/kaizen/flutter/bin:/Users/yanick/MagicLeap/mlsdk/v0.18.0/tools/mldb
-# PATH=/usr/local/opt/python/libexec/bin:/usr/local/sbin:/usr/local/bin:/Users/yanick/anaconda3/bin:$PATH:/Users/yanick/Documents/kaizen/flutter/bin:/Users/yanick/MagicLeap/mlsdk/v0.18.0/tools/mldb
+#PATH=/usr/local/sbin:/usr/local/bin
 
 
 # init conda 
-. "/Users/yanick/anaconda3/etc/profile.d/conda.sh"
+[ -d /Users/yanick ] && . "/Users/yanick/anaconda3/etc/profile.d/conda.sh"
 
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/yanick/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -146,7 +145,7 @@ test -e "${HOME}/do_not_commit.zsrhc" && source "${HOME}/do_not_commit.zsrhc"
 ######################################################################
 # Liquid Prompt
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
-[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+[ -d ~/liquidprompt ] &&[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
 
 ######################################################################
 # Fuzzy finder 'fzf'
