@@ -58,3 +58,13 @@ dotfiles add .bashrc
 dotfiles commit -m "Add bashrc"
 dotfiles push
 ```
+
+# Vim and Vundle installation
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+Then, in Vim: 
+```
+:PluginInstall
+```
