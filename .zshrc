@@ -141,7 +141,7 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 ######################################################################
 # Settings not to be commited publicly
-test -e "${HOME}/do_not_commit.zsrhc" && source "${HOME}/do_not_commit.zshrc"
+test -e "${HOME}/do_not_commit.zshrc" && source "${HOME}/do_not_commit.zshrc"
 
 
 ######################################################################
