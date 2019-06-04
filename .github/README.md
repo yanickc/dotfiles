@@ -68,3 +68,64 @@ Then, in Vim:
 ```
 :PluginInstall
 ```
+
+# brew and Mac software
+https://brew.sh/
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+```
+brew install wget
+brew install git
+brew install python
+brew install macvim
+brew install httpie     # User-friendly cURL replacement (command-line HTTP client)
+brew install watch      # Executes a program periodically, showing output fullscreen
+brew install htop 
+brew install glances 
+brew install exa        # Modern replacement for 'ls'
+brew install tree
+brew install jq         # Lightweight and flexible command-line JSON processor
+
+```
+
+# brew cask
+Brew cask is an extension to brew that allows management of graphical applications through the Cask project. 
+
+```
+brew cask install docker
+
+# Personal VPN
+brew cask install purevpn
+
+# wallpaper
+brew cask install satellite-eyes
+
+# fonts
+brew cask install font-cousine-nerd-font-mono
+brew cask install font-fantasquesansmono-nerd-font-mono
+brew cask install font-firacode-nerd-font-mono
+brew cask install font-iosevka-nerd-font-mono
+brew cask install font-monofur-nerd-font-mono
+brew cask install font-nova-mono
+brew cask install 
+```
+
+# local dev tools
+```
+brew install mongodb
+brew install redis
+
+# Postgres.app is a full-featured PostgreSQL installation packaged as a standard Mac app. It includes everything you 
+# need to get started: we’ve even included popular extensions like PostGIS for geo data and plv8 for JavaScript.
+# 
+# Postgres.app has a beautiful user interface and a convenient menu bar item. You never need to touch the command line # to use it – but of course we do include all the necessary command line tools and header files for advanced users.
+
+brew cask install postgres
+
+# - or without UI -
+brew install postgres
+
+
+```

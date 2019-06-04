@@ -1,21 +1,20 @@
+######################################################################
+# zsh profiling
 PROFILE=false
 if [[ "$PROFILE" == true ]]; then
   zmodload zsh/zprof # top of your .zshrc file
 fi
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# yanick
-# to fix pycharm terminal. It should load /etc/paths on macosx but it doesn't
-#PATH=/usr/local/sbin:/usr/local/bin
-
-
+######################################################################
 # init conda 
 [ -d /Users/yanick ] && . "/Users/yanick/anaconda3/etc/profile.d/conda.sh"
 
+######################################################################
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
+
+######################################################################
+# oh-my-zsh config
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -23,22 +22,12 @@ export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-
 # ZSH_THEME="powerlevel9k"
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs newline)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 # POWERLEVEL9K_SHORTEN_DIR_LENGTH=10
 # POWERLEVEL9K_SHORTEN_STRATEGY=truncate_middle
-
 ZSH_THEME="frisk"
-
-
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -94,11 +83,9 @@ plugins=(
   zsh-autosuggestions
 )
 
-######################################################################
-
 source $ZSH/oh-my-zsh.sh
 
-
+######################################################################
 # User configuration
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=104'  # call to see all colors: spectrum_ls
 
@@ -114,7 +101,7 @@ fi
 
 # My added auto completion
 # eval "$(pipenv --completion)"
-fpath=( ~/.zfunc "${fpath[@]}" )
+#fpath=( ~/.zfunc "${fpath[@]}" )
 
 # Reload the zsh-completions, only once a day. See https://medium.com/@dannysmith/little-thing-2-speeding-up-zsh-f1860390f92
 autoload -Uz compinit
@@ -124,6 +111,7 @@ done
 compinit -C
 
 
+######################################################################
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -134,10 +122,12 @@ compinit -C
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dk=docker
 
-
-# Store .dotfiles into Git. See https://www.atlassian.com/git/tutorials/dotfiles
-# and 
+# Store .dotfiles into Git. See https://www.atlassian.com/git/tutorials/dotfiles and https://github.com/yanickc/dotfiles
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# exa - a modern replacement for 'ls'
+[ -e /usr/local/bin/exa ] && alias ls="/usr/local/bin/exa" && alias ll="/usr/local/bin/exa -l" && alias la="/usr/local/bin/exa -al"
+
 
 ######################################################################
 # Settings not to be commited publicly
@@ -167,6 +157,9 @@ fopen() {
     [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
   fi
 }
+
+######################################################################
+# Git utils
 
 fgit_switch_branch() {
   local branches branch
@@ -216,6 +209,8 @@ tm() {
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 
+######################################################################
+# zsh profiling
 if [[ "$PROFILE" == true ]] ; then
   zprof # bottom of .zshrc
 fi
