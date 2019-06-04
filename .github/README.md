@@ -77,7 +77,10 @@ https://brew.sh/
 
 ```
 brew install wget
+
 brew install git
+brew cask install sourcetree
+
 brew install python
 brew install macvim
 brew install httpie     # User-friendly cURL replacement (command-line HTTP client)
@@ -85,7 +88,6 @@ brew install watch      # Executes a program periodically, showing output fullsc
 brew install htop 
 brew install glances 
 brew install exa        # Modern replacement for 'ls'
-brew install tree
 brew install jq         # Lightweight and flexible command-line JSON processor
 
 ```
@@ -95,6 +97,7 @@ Brew cask is an extension to brew that allows management of graphical applicatio
 
 ```
 brew cask install docker
+brew cask install sourcetree 
 
 # Personal VPN
 brew cask install purevpn

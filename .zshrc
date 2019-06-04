@@ -13,6 +13,8 @@ fi
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
+export EDITOR='vim'
+
 ######################################################################
 # oh-my-zsh config
 
@@ -89,19 +91,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=104'  # call to see all colors: spectrum_ls
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
-
-# My added auto completion
-# eval "$(pipenv --completion)"
-#fpath=( ~/.zfunc "${fpath[@]}" )
 
 # Reload the zsh-completions, only once a day. See https://medium.com/@dannysmith/little-thing-2-speeding-up-zsh-f1860390f92
 autoload -Uz compinit
