@@ -99,6 +99,7 @@ Brew cask is an extension to brew that allows management of graphical applicatio
 brew cask install docker
 brew cask install sourcetree 
 
+brew cask install visual-studio-code
 brew cask install firefox
 brew cask install jetbrains-toolbox
 brew cask install 1password
