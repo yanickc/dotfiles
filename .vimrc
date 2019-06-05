@@ -49,9 +49,6 @@ Plugin 'xolox/vim-session'
 " Plugin 'majutsushi/tagbar'
 Plugin 'qpkorr/vim-renamer'
 
-Plugin 'flazz/vim-colorschemes'
-" Voir : http://cocopon.me/app/vim-color-gallery/
-
 
 call vundle#end()
 
