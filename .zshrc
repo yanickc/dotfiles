@@ -115,7 +115,7 @@ alias dk=docker
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # exa - a modern replacement for 'ls'
-[ -e /usr/local/bin/exa ] && alias ls="/usr/local/bin/exa" && alias ll="/usr/local/bin/exa -l" && alias la="/usr/local/bin/exa -al"
+[ -e /usr/local/bin/exa ] && alias ls="/usr/local/bin/exa --git" && alias ll="/usr/local/bin/exa -l --git" && alias la="/usr/local/bin/exa -al --git"
 
 
 ######################################################################
