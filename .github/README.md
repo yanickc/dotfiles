@@ -100,7 +100,9 @@ brew cask install docker
 brew cask install sourcetree 
 
 brew cask install visual-studio-code
+brew cask install brave-browser
 brew cask install firefox
+brew cask install google-chrome
 brew cask install jetbrains-toolbox
 brew cask install 1password
 brew cask install evernote
@@ -121,6 +123,7 @@ brew cask install font-firacode-nerd-font-mono
 brew cask install font-iosevka-nerd-font-mono
 brew cask install font-monofur-nerd-font-mono
 brew cask install font-nova-mono
+brew cask install font-ibm-plex
 ```
 
 # local dev tools

@@ -147,9 +147,6 @@ au FileType xml setlocal foldmethod=syntax
 
 if has("gui_macvim")
   let macvim_hig_shift_movement = 1
-"  colorscheme macvim
-"  colorscheme desert
-"  set bg=dark
   set ignorecase
   set autoread
 endif
