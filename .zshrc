@@ -185,6 +185,8 @@ fgit_del_merged_branch() {
 # `tm` will allow you to select your tmux session via fzf.
 # `tm irc` will attach to the irc session (if it exists), else it will create it.
 
+######################################################################
+# tmux
 tm() {
   [[ -n "$TMUX" ]] && change="switch-client" || change="attach-session"
   if [ $1 ]; then
@@ -193,14 +195,19 @@ tm() {
   session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --exit-0) &&  tmux $change -t "$session" || echo "No sessions found."
 }
 
+######################################################################
+# fzf fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# fd - Find any directory and cd to selected directory
+fd() { local dir dir=$(find ${1:-.} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$dir"}
 
 ######################################################################
 # iterm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 
 ######################################################################
 # zsh profiling
 if [[ "$PROFILE" == true ]] ; then
   zprof # bottom of .zshrc
 fi
+

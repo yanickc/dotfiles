@@ -109,6 +109,7 @@ brew cask install evernote
 brew cask install slack
 brew cask install dropbox
 brew cask install menumeters
+brew cask install muzzle
 
 # Personal VPN
 brew cask install purevpn
