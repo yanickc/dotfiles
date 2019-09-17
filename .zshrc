@@ -118,6 +118,10 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # exa - a modern replacement for 'ls'
 [ -e /usr/local/bin/exa ] && alias ls="/usr/local/bin/exa --git" && alias ll="/usr/local/bin/exa -l --git --time-style long-iso" && alias la="ll -a"
 
+eval $(thefuck --alias)
+
+alias please='sudo $(fc -ln -1)'
+
 
 ######################################################################
 # Settings not to be commited publicly
@@ -210,4 +214,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 if [[ "$PROFILE" == true ]] ; then
   zprof # bottom of .zshrc
 fi
+
 
