@@ -125,6 +125,7 @@ brew cask install font-iosevka-nerd-font-mono
 brew cask install font-monofur-nerd-font-mono
 brew cask install font-nova-mono
 brew cask install font-ibm-plex
+brew cask install font-input
 ```
 
 # local dev tools

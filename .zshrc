@@ -81,7 +81,8 @@ plugins=(
   tmux
   z
   pyenv
-  fzf-zsh
+  fzf
+  # fzf-zsh
   zsh-completions
   zsh-autosuggestions
 )
@@ -150,6 +151,13 @@ fopen() {
   if [ -n "$file" ]; then
     [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
   fi
+}
+
+######################################################################
+# Docker utils
+fdocker_prune() {
+  docker rm $(docker ps -q -f 'status=exited')
+  docker rmi $(docker images -q -f "dangling=true")
 }
 
 ######################################################################
