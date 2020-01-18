@@ -81,7 +81,10 @@ brew install wget
 brew install git
 brew cask install sourcetree
 
-brew install python
+brew install pyenv      # pyenv lets you easily switch between multiple versions of Python.
+                        # See https://github.com/pyenv/pyenv#readme
+#brew install python
+
 brew install macvim
 brew install httpie     # User-friendly cURL replacement (command-line HTTP client)
 brew install watch      # Executes a program periodically, showing output fullscreen
