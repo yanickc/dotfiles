@@ -112,7 +112,7 @@ brew cask install evernote
 brew cask install slack
 brew cask install dropbox
 brew cask install menumeters
-brew cask install muzzle
+brew cask install itsycal
 
 # Personal VPN
 brew cask install purevpn
@@ -150,7 +150,10 @@ brew install postgres
 ```
 
 # Other software
-Magnet - https://magnet.crowdcafe.com/index.html
-Amphetamine - https://itunes.apple.com/ca/app/amphetamine/id937984704?mt=12&ign-mpt=uo%3D4
-Spark mail - https://sparkmailapp.com/
+- Magnet - https://magnet.crowdcafe.com/index.html
+- Amphetamine - https://itunes.apple.com/ca/app/amphetamine/id937984704?mt=12&ign-mpt=uo%3D4
+- Spark mail - https://sparkmailapp.com/
+- Clocker
+- Vitamin-R
+
 
