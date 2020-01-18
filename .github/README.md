@@ -118,6 +118,7 @@ brew cask install purevpn
 brew cask install satellite-eyes
 
 # fonts
+brew cask install font-jetbrains-mono
 brew cask install font-cousine-nerd-font-mono
 brew cask install font-fantasquesansmono-nerd-font-mono
 brew cask install font-firacode-nerd-font-mono
