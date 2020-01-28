@@ -81,7 +81,10 @@ brew install wget
 brew install git
 brew cask install sourcetree
 
-brew install python
+brew install pyenv      # pyenv lets you easily switch between multiple versions of Python.
+                        # See https://github.com/pyenv/pyenv#readme
+#brew install python
+
 brew install macvim
 brew install httpie     # User-friendly cURL replacement (command-line HTTP client)
 brew install watch      # Executes a program periodically, showing output fullscreen
@@ -109,7 +112,7 @@ brew cask install evernote
 brew cask install slack
 brew cask install dropbox
 brew cask install menumeters
-brew cask install muzzle
+brew cask install itsycal
 
 # Personal VPN
 brew cask install purevpn
@@ -147,7 +150,10 @@ brew install postgres
 ```
 
 # Other software
-Magnet - https://magnet.crowdcafe.com/index.html
-Amphetamine - https://itunes.apple.com/ca/app/amphetamine/id937984704?mt=12&ign-mpt=uo%3D4
-Spark mail - https://sparkmailapp.com/
+- Magnet - https://magnet.crowdcafe.com/index.html
+- Amphetamine - https://itunes.apple.com/ca/app/amphetamine/id937984704?mt=12&ign-mpt=uo%3D4
+- Spark mail - https://sparkmailapp.com/
+- Clocker
+- Vitamin-R
+
 
