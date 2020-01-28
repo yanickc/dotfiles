@@ -25,7 +25,9 @@ set nocompatible
 filetype on   " required on MacOSX only
 filetype off  " required!
 
-set guifont=Monoid\ HalfLoose\ Regular:h12
+set clipboard=unnamed  " To use the MaxOSX clipboard 
+
+set guifont=Jetbrains\ Mono:h14 
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
