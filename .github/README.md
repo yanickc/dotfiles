@@ -101,18 +101,18 @@ Brew cask is an extension to brew that allows management of graphical applicatio
 ```
 brew cask install docker
 brew cask install sourcetree 
-
 brew cask install visual-studio-code
-brew cask install brave-browser
-brew cask install firefox
-brew cask install google-chrome
 brew cask install jetbrains-toolbox
+brew cask install firefox
+brew cask install brave-browser
+brew cask install google-chrome
 brew cask install 1password
 brew cask install evernote
 brew cask install slack
 brew cask install dropbox
 brew cask install menumeters
 brew cask install itsycal
+brew cask install ticktick
 
 # Personal VPN
 brew cask install purevpn
@@ -153,7 +153,7 @@ brew install postgres
 - Magnet - https://magnet.crowdcafe.com/index.html
 - Amphetamine - https://itunes.apple.com/ca/app/amphetamine/id937984704?mt=12&ign-mpt=uo%3D4
 - Spark mail - https://sparkmailapp.com/
-- Clocker
-- Vitamin-R
+- Menu World Time - https://apps.apple.com/ca/app/menu-world-time/id1446377255
+
 
 
