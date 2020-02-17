@@ -2,9 +2,9 @@
 
 A bare git repository to store dotfiles.
 
-See https://www.atlassian.com/git/tutorials/dotfiles
-
 # Installation
+
+Excerpt from: https://www.atlassian.com/git/tutorials/dotfiles
 
 Add to .bashrc or .zshrc:
 ```
