@@ -17,6 +17,26 @@ export EDITOR='vim'
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 ######################################################################
+# ranger file manager
+function ranger_cd {
+    local IFS=$'\t\n'
+    local tempfile="$(mktemp -t tmp.XXXXXX)"
+    local ranger_cmd=(
+        command
+        ranger
+        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
+    )
+    
+    ${ranger_cmd[@]} "$@"
+    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
+        cd -- "$(cat "$tempfile")" || return
+    fi
+    command rm -f -- "$tempfile" 2>/dev/null
+}
+alias r=ranger_cd
+
+
+######################################################################
 # oh-my-zsh config
 
 # Path to your oh-my-zsh installation.
@@ -85,6 +105,7 @@ plugins=(
   # fzf-zsh
   zsh-completions
   zsh-autosuggestions
+  poetry
 )
 
 source $ZSH/oh-my-zsh.sh
