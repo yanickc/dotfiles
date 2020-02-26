@@ -59,16 +59,6 @@ dotfiles commit -m "Add bashrc"
 dotfiles push
 ```
 
-# Vim and Vundle installation
-```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-```
-
-Then, in Vim: 
-```
-:PluginInstall
-```
-
 # brew and Mac software
 https://brew.sh/
 ```
@@ -157,4 +147,13 @@ brew install postgres
 - Menu World Time - https://apps.apple.com/ca/app/menu-world-time/id1446377255
 
 
+# Vim and Vundle installation
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+Then, in Vim: 
+```
+:PluginInstall
+```
 
