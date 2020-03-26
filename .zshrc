@@ -17,24 +17,15 @@ export EDITOR='vim'
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 ######################################################################
-# ranger file manager
-function ranger_cd {
-    local IFS=$'\t\n'
-    local tempfile="$(mktemp -t tmp.XXXXXX)"
-    local ranger_cmd=(
-        command
-        ranger
-        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
-    )
-    
-    ${ranger_cmd[@]} "$@"
-    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
-        cd -- "$(cat "$tempfile")" || return
-    fi
-    command rm -f -- "$tempfile" 2>/dev/null
-}
-alias r=ranger_cd
+# lf file manager
+#
+LFCD="$HOME/.config/lf/lfcd.sh" 
+if [ -f "$LFCD" ]; then
+    source "$LFCD"
+fi
 
+bindkey -s '^o' 'lfcd\n'  # zsh
+#export PATH="~/.config/lf/lfcd.sh:$PATH"
 
 ######################################################################
 # oh-my-zsh config
@@ -100,7 +91,7 @@ plugins=(
   docker-compose
   tmux
   z
-  pyenv
+  # pyenv
   fzf
   # fzf-zsh
   zsh-completions
@@ -244,4 +235,21 @@ if [[ "$PROFILE" == true ]] ; then
   zprof # bottom of .zshrc
 fi
 
+######################################################################
+# poetry
+source $HOME/.poetry/env
 
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+
+#compdef main.py
+_main.py() {
+  eval $(env COMMANDLINE="${words[1,$CURRENT]}" _MAIN.PY_COMPLETE=complete-zsh  main.py)
+}
+if [[ "$(basename -- ${(%):-%x})" != "_main.py" ]]; then
+  compdef _main.py main.py
+fi
+
+source /Users/yanick/Library/Preferences/org.dystroy.broot/launcher/bash/br
