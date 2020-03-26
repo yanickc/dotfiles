@@ -76,7 +76,7 @@ brew install pyenv      # pyenv lets you easily switch between multiple versions
 #brew install python
 
 brew install macvim
-brew install ranger
+brew install lf         # lf is a terminal file manager.
 brew install httpie     # User-friendly cURL replacement (command-line HTTP client)
 brew install watch      # Executes a program periodically, showing output fullscreen
 brew install htop 
