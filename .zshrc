@@ -6,6 +6,10 @@ if [[ "$PROFILE" == true ]]; then
 fi
 
 ######################################################################
+# Settings not to be commited publicly
+test -e "${HOME}/do_not_commit.zshrc" && source "${HOME}/do_not_commit.zshrc"
+
+######################################################################
 # init conda 
 [ -d /Users/yanick ] && . "/Users/yanick/anaconda3/etc/profile.d/conda.sh"
 
@@ -16,6 +20,7 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
+
 ######################################################################
 # lf file manager
 #
@@ -25,7 +30,13 @@ if [ -f "$LFCD" ]; then
 fi
 
 bindkey -s '^o' 'lfcd\n'  # zsh
-#export PATH="~/.config/lf/lfcd.sh:$PATH"
+
+
+######################################################################
+# Pushover
+# PUSH_OVER_APP_TOKEN and PUSH_OVER_APP_TOKEN are defined in do_not_commit.zshrc
+notify() {notifiers pushover notify --user $PUSH_OVER_USER_KEY --token $PUSH_OVER_APP_TOKEN '$1'}
+
 
 ######################################################################
 # oh-my-zsh config
@@ -136,9 +147,6 @@ eval $(thefuck --alias)
 alias please='sudo $(fc -ln -1)'
 
 
-######################################################################
-# Settings not to be commited publicly
-test -e "${HOME}/do_not_commit.zshrc" && source "${HOME}/do_not_commit.zshrc"
 
 
 ######################################################################
@@ -241,15 +249,6 @@ source $HOME/.poetry/env
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
-fi
-
-
-#compdef main.py
-_main.py() {
-  eval $(env COMMANDLINE="${words[1,$CURRENT]}" _MAIN.PY_COMPLETE=complete-zsh  main.py)
-}
-if [[ "$(basename -- ${(%):-%x})" != "_main.py" ]]; then
-  compdef _main.py main.py
 fi
 
 source /Users/yanick/Library/Preferences/org.dystroy.broot/launcher/bash/br
