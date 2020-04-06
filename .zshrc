@@ -35,7 +35,7 @@ bindkey -s '^o' 'lfcd\n'  # zsh
 ######################################################################
 # Pushover
 # PUSH_OVER_APP_TOKEN and PUSH_OVER_APP_TOKEN are defined in do_not_commit.zshrc
-notify() {notifiers pushover notify --user $PUSH_OVER_USER_KEY --token $PUSH_OVER_APP_TOKEN '$1'}
+notify() {notifiers pushover notify --user $PUSH_OVER_USER_KEY --token $PUSH_OVER_APP_TOKEN "$1"}
 
 
 ######################################################################
