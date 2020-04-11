@@ -244,11 +244,13 @@ if [[ "$PROFILE" == true ]] ; then
 fi
 
 ######################################################################
-# poetry
-source $HOME/.poetry/env
-
+# pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+######################################################################
+# broot lets you explore directory trees and launch commands.                                                   ▐
+# It's best used when launched as br.                                                                           ▐
+# See https://dystroy.org/broot for a complete guide.
 source /Users/yanick/Library/Preferences/org.dystroy.broot/launcher/bash/br
