@@ -146,7 +146,7 @@ brew install postgres
 - Amphetamine - https://itunes.apple.com/ca/app/amphetamine/id937984704?mt=12&ign-mpt=uo%3D4
 - Spark mail - https://sparkmailapp.com/
 - Menu World Time - https://apps.apple.com/ca/app/menu-world-time/id1446377255
-
+- Keka - https://www.keka.io/en/
 
 # Vim and Vundle installation
 ```
