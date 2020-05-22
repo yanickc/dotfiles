@@ -75,7 +75,6 @@ brew install pyenv      # pyenv lets you easily switch between multiple versions
                         # See https://github.com/pyenv/pyenv#readme
 #brew install python
 
-brew install macvim
 brew install lf         # lf is a terminal file manager.
 brew install httpie     # User-friendly cURL replacement (command-line HTTP client)
 brew install watch      # Executes a program periodically, showing output fullscreen
@@ -91,6 +90,7 @@ brew install notifiers  # Send notifications. See .zshrc : notify() function.
 Brew cask is an extension to brew that allows management of graphical applications through the Cask project. 
 
 ```
+brew cask install macvim
 brew cask install docker
 brew cask install sourcetree 
 brew cask install visual-studio-code
