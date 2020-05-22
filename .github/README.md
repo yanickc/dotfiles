@@ -96,7 +96,6 @@ brew cask install sourcetree
 brew cask install visual-studio-code
 brew cask install jetbrains-toolbox
 brew cask install firefox
-brew cask install brave-browser
 brew cask install google-chrome
 brew cask install 1password
 brew cask install bitwarden
