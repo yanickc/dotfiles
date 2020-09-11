@@ -1,4 +1,3 @@
-
 " An example for a vimrc file.
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
@@ -152,6 +151,19 @@ if has("gui_macvim")
   set ignorecase
   set autoread
 endif
+
+
+
+colorscheme default
+
+" dark mode enabled?
+if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+   set background=dark
+else
+  set background=light
+endif  
+
+
 
 set tabstop=2
 set shiftwidth=2

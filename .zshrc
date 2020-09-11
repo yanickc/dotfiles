@@ -142,10 +142,9 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # exa - a modern replacement for 'ls'
 [ -e /usr/local/bin/exa ] && alias ls="/usr/local/bin/exa --git" && alias ll="/usr/local/bin/exa -l --git --time-style long-iso" && alias la="ll -a"
 
-eval $(thefuck --alias)
-
 alias please='sudo $(fc -ln -1)'
 
+alias r=ranger
 
 
 
@@ -254,3 +253,6 @@ fi
 # It's best used when launched as br.                                                                           ▐
 # See https://dystroy.org/broot for a complete guide.
 source /Users/yanick/Library/Preferences/org.dystroy.broot/launcher/bash/br
+
+# Created by `userpath` on 2020-09-02 21:23:19
+export PATH="$PATH:/Users/yanick/.local/bin"

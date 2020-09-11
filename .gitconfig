@@ -1,0 +1,46 @@
+# default case
+[include]
+  path = .gitconfig.perso
+
+# ElementAI
+[includeIf "gitdir:**/eai/**/.git"]
+  path = .gitconfig.elementai
+
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = auto
+[push]
+	default = simple
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	excludesfile = /Users/yanick/.gitignore_global
+	autocrlf = input
+[difftool "sourcetree"]
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
+	path = -ro
+[mergetool "sourcetree"]
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/yanick/.stCommitMsg
+	gpgsign = true
+[alias]
+	l = log --pretty=format:\"%Cgreen%h %Creset %s %Cblueby %an (%ar) %Cred %d\" --graph
+	la = log --pretty=format:\"%Cgreen%h %Creset %Cred%d%Creset %s %Cblueby %an (%ar)\" --graph --all
+[diff]
+	tool = bc3
+[merge]
+	tool = bc3
+[mergetool "bcomp"]
+	trustExitCode = true
+[mergetool "bc3"]
+	trustExitCode = true
+[gpg]
+	program = gpg
