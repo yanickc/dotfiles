@@ -75,7 +75,6 @@ brew install pyenv      # pyenv lets you easily switch between multiple versions
                         # See https://github.com/pyenv/pyenv#readme
 #brew install python
 
-brew install macvim
 brew install lf         # lf is a terminal file manager.
 brew install httpie     # User-friendly cURL replacement (command-line HTTP client)
 brew install watch      # Executes a program periodically, showing output fullscreen
@@ -91,12 +90,13 @@ brew install notifiers  # Send notifications. See .zshrc : notify() function.
 Brew cask is an extension to brew that allows management of graphical applications through the Cask project. 
 
 ```
+brew cask install macvim
 brew cask install docker
+brew cask install vnc-viewer
 brew cask install sourcetree 
 brew cask install visual-studio-code
 brew cask install jetbrains-toolbox
 brew cask install firefox
-brew cask install brave-browser
 brew cask install google-chrome
 brew cask install 1password
 brew cask install bitwarden
@@ -105,6 +105,7 @@ brew cask install slack
 brew cask install dropbox
 brew cask install menumeters
 brew cask install itsycal
+brew cask install gpg-suite
 
 # Personal VPN
 brew cask install purevpn
@@ -146,7 +147,7 @@ brew install postgres
 - Amphetamine - https://itunes.apple.com/ca/app/amphetamine/id937984704?mt=12&ign-mpt=uo%3D4
 - Spark mail - https://sparkmailapp.com/
 - Menu World Time - https://apps.apple.com/ca/app/menu-world-time/id1446377255
-
+- Keka - https://www.keka.io/en/
 
 # Vim and Vundle installation
 ```
