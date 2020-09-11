@@ -105,6 +105,7 @@ brew cask install slack
 brew cask install dropbox
 brew cask install menumeters
 brew cask install itsycal
+brew cask install gpg-suite
 
 # Personal VPN
 brew cask install purevpn
