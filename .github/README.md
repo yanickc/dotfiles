@@ -83,6 +83,7 @@ brew install glances
 brew install exa        # Modern replacement for 'ls'
 brew install jq         # Lightweight and flexible command-line JSON processor
 brew install notifiers  # Send notifications. See .zshrc : notify() function.
+brew install git-delta  # A viewer for git and diff output
 
 ```
 
