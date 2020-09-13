@@ -22,6 +22,7 @@
 [core]
 	excludesfile = /Users/yanick/.gitignore_global
 	autocrlf = input
+	pager = delta
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
 	path = -ro
@@ -43,4 +44,13 @@
 [mergetool "bc3"]
 	trustExitCode = true
 [gpg]
-	program = gpg
+    program = gpg
+
+[delta]
+    plus-color = "#012800"
+    minus-color = "#340001"
+    syntax-theme = Monokai Extended
+    features = side-by-side line-numbers decorations
+[interactive]
+    diffFilter = delta --color-only
+    
