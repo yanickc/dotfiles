@@ -87,6 +87,13 @@ brew install git-delta  # A viewer for git and diff output
 brew install bat        # A cat(1) clone with syntax highlighting and Git integration. 
 brew install starship   # The minimal, blazing-fast, and infinitely customizable prompt for any shell! 
 
+brew install gpg        # See https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification
+
+# gpg-agent on Mac
+brew install pinentry-mac
+echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+killall gpg-agent
+
 ```
 
 # brew cask
