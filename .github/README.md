@@ -124,15 +124,15 @@ brew cask install purevpn
 brew cask install satellite-eyes
 
 # fonts
-brew cask install font-jetbrains-mono
-brew cask install font-cousine-nerd-font-mono
-brew cask install font-fantasquesansmono-nerd-font-mono
-brew cask install font-firacode-nerd-font-mono
-brew cask install font-iosevka-nerd-font-mono
-brew cask install font-monofur-nerd-font-mono
-brew cask install font-nova-mono
-brew cask install font-ibm-plex
-brew cask install font-input
+brew cask install homebrew/cask-fonts/font-jetbrains-mono
+brew cask install homebrew/cask-fonts/font-cousine-nerd-font-mono
+brew cask install homebrew/cask-fonts/font-fantasquesansmono-nerd-font-mono
+brew cask install homebrew/cask-fonts/font-firacode-nerd-font-mono
+brew cask install homebrew/cask-fonts/font-iosevka-nerd-font-mono
+brew cask install homebrew/cask-fonts/font-monofur-nerd-font-mono
+brew cask install homebrew/cask-fonts/font-nova-mono
+brew cask install homebrew/cask-fonts/font-ibm-plex
+brew cask install homebrew/cask-fonts/font-input
 ```
 
 # local dev tools
