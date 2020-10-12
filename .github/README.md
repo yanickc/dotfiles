@@ -137,6 +137,8 @@ brew cask install homebrew/cask-fonts/font-input
 
 # local dev tools
 ```
+
+See https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 brew tap mongodb/brew
 brew install mongodb-community@4.4
 
