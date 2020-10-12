@@ -137,7 +137,9 @@ brew cask install homebrew/cask-fonts/font-input
 
 # local dev tools
 ```
-brew install mongodb
+brew tap mongodb/brew
+brew install mongodb-community@4.4
+
 brew install redis
 
 # Postgres.app is a full-featured PostgreSQL installation packaged as a standard Mac app. It includes everything you 
