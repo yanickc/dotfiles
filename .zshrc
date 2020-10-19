@@ -11,7 +11,7 @@ test -e "${HOME}/do_not_commit.zshrc" && source "${HOME}/do_not_commit.zshrc"
 
 ######################################################################
 # init conda 
-[ -d /Users/yanick ] && . "/Users/yanick/anaconda3/etc/profile.d/conda.sh"
+#[ -d /Users/yanick ] && . "/Users/yanick/anaconda3/etc/profile.d/conda.sh"
 
 ######################################################################
 export LC_ALL=en_US.UTF-8  
@@ -110,6 +110,12 @@ plugins=(
   poetry
 )
 
+# Brew managed completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
+
 source $ZSH/oh-my-zsh.sh
 
 ######################################################################
@@ -118,6 +124,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=104'  # call to see all colors: spectrum_ls
 
 
 # Reload the zsh-completions, only once a day. See https://medium.com/@dannysmith/little-thing-2-speeding-up-zsh-f1860390f92
+
 autoload -Uz compinit
 for dump in ~/.zcompdump(N.mh+24); do
   compinit
@@ -145,7 +152,7 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias please='sudo $(fc -ln -1)'
 
 alias r=ranger
-
+alias e=pycharm
 
 
 ######################################################################
@@ -256,3 +263,22 @@ source /Users/yanick/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 # Created by `userpath` on 2020-09-02 21:23:19
 export PATH="$PATH:/Users/yanick/.local/bin"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
