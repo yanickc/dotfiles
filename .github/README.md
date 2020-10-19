@@ -62,7 +62,7 @@ dotfiles push
 # brew and Mac software
 https://brew.sh/
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 ```
@@ -83,6 +83,16 @@ brew install glances
 brew install exa        # Modern replacement for 'ls'
 brew install jq         # Lightweight and flexible command-line JSON processor
 brew install notifiers  # Send notifications. See .zshrc : notify() function.
+brew install git-delta  # A viewer for git and diff output. https://github.com/dandavison/delta
+brew install bat        # A cat(1) clone with syntax highlighting and Git integration. 
+brew install starship   # The minimal, blazing-fast, and infinitely customizable prompt for any shell! 
+
+brew install gpg        # See https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification
+
+# gpg-agent on Mac
+brew install pinentry-mac
+echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+killall gpg-agent
 
 ```
 
@@ -114,20 +124,24 @@ brew cask install purevpn
 brew cask install satellite-eyes
 
 # fonts
-brew cask install font-jetbrains-mono
-brew cask install font-cousine-nerd-font-mono
-brew cask install font-fantasquesansmono-nerd-font-mono
-brew cask install font-firacode-nerd-font-mono
-brew cask install font-iosevka-nerd-font-mono
-brew cask install font-monofur-nerd-font-mono
-brew cask install font-nova-mono
-brew cask install font-ibm-plex
-brew cask install font-input
+brew cask install homebrew/cask-fonts/font-jetbrains-mono
+brew cask install homebrew/cask-fonts/font-cousine-nerd-font-mono
+brew cask install homebrew/cask-fonts/font-fantasquesansmono-nerd-font-mono
+brew cask install homebrew/cask-fonts/font-firacode-nerd-font-mono
+brew cask install homebrew/cask-fonts/font-iosevka-nerd-font-mono
+brew cask install homebrew/cask-fonts/font-monofur-nerd-font-mono
+brew cask install homebrew/cask-fonts/font-nova-mono
+brew cask install homebrew/cask-fonts/font-ibm-plex
+brew cask install homebrew/cask-fonts/font-input
 ```
 
 # local dev tools
 ```
-brew install mongodb
+
+See https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+brew tap mongodb/brew
+brew install mongodb-community@4.4
+
 brew install redis
 
 # Postgres.app is a full-featured PostgreSQL installation packaged as a standard Mac app. It includes everything you 
