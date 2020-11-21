@@ -154,6 +154,8 @@ alias please='sudo $(fc -ln -1)'
 alias r=ranger
 alias e=pycharm
 
+alias start_black="blackd  &>/dev/null &"
+
 
 ######################################################################
 # Fuzzy finder 'fzf'
@@ -282,3 +284,6 @@ unset __conda_setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"
+
