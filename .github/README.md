@@ -59,6 +59,13 @@ dotfiles commit -m "Add bashrc"
 dotfiles push
 ```
 
+
+# Installing  `oh-my-zsh`
+
+```
+bash .install-oh-my-zsh.sh
+```
+
 # brew and Mac software
 https://brew.sh/
 ```
@@ -69,7 +76,7 @@ https://brew.sh/
 brew install wget
 
 brew install git
-brew cask install sourcetree
+brew install --cask sourcetree
 
 brew install pyenv      # pyenv lets you easily switch between multiple versions of Python.
                         # See https://github.com/pyenv/pyenv#readme
@@ -100,39 +107,39 @@ killall gpg-agent
 Brew cask is an extension to brew that allows management of graphical applications through the Cask project. 
 
 ```
-brew cask install macvim
-brew cask install docker
-brew cask install vnc-viewer
-brew cask install sourcetree 
-brew cask install visual-studio-code
-brew cask install jetbrains-toolbox
-brew cask install firefox
-brew cask install google-chrome
-brew cask install 1password
-brew cask install bitwarden
-brew cask install evernote
-brew cask install slack
-brew cask install dropbox
-brew cask install menumeters
-brew cask install itsycal
-brew cask install gpg-suite
+brew install --cask docker
+brew install --cask macvim
+brew install --cask vnc-viewer
+brew install --cask sourcetree 
+brew install --cask visual-studio-code
+brew install --cask jetbrains-toolbox
+brew install --cask firefox
+brew install --cask google-chrome
+brew install --cask 1password
+brew install --cask bitwarden
+brew install --cask evernote
+brew install --cask slack
+brew install --cask dropbox
+brew install --cask menumeters
+brew install --cask itsycal
+brew install --cask gpg-suite
 
 # Personal VPN
-brew cask install purevpn
+brew install --cask purevpn
 
 # wallpaper
-brew cask install satellite-eyes
+brew install --cask satellite-eyes
 
 # fonts
-brew cask install homebrew/cask-fonts/font-jetbrains-mono
-brew cask install homebrew/cask-fonts/font-cousine-nerd-font-mono
-brew cask install homebrew/cask-fonts/font-fantasquesansmono-nerd-font-mono
-brew cask install homebrew/cask-fonts/font-firacode-nerd-font-mono
-brew cask install homebrew/cask-fonts/font-iosevka-nerd-font-mono
-brew cask install homebrew/cask-fonts/font-monofur-nerd-font-mono
-brew cask install homebrew/cask-fonts/font-nova-mono
-brew cask install homebrew/cask-fonts/font-ibm-plex
-brew cask install homebrew/cask-fonts/font-input
+brew install --cask homebrew/cask-fonts/font-jetbrains-mono
+brew install --cask homebrew/cask-fonts/font-cousine-nerd-font-mono
+brew install --cask homebrew/cask-fonts/font-fantasquesansmono-nerd-font-mono
+brew install --cask homebrew/cask-fonts/font-firacode-nerd-font-mono
+brew install --cask homebrew/cask-fonts/font-iosevka-nerd-font-mono
+brew install --cask homebrew/cask-fonts/font-monofur-nerd-font-mono
+brew install --cask homebrew/cask-fonts/font-nova-mono
+brew install --cask homebrew/cask-fonts/font-ibm-plex
+brew install --cask homebrew/cask-fonts/font-input
 ```
 
 # local dev tools
@@ -149,7 +156,7 @@ brew install redis
 # 
 # Postgres.app has a beautiful user interface and a convenient menu bar item. You never need to touch the command line # to use it – but of course we do include all the necessary command line tools and header files for advanced users.
 
-brew cask install postgres
+brew install --cask postgres
 
 # - or without UI -
 brew install postgres
