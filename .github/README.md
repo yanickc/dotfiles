@@ -73,7 +73,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 defaults write NSGlobalDomain KeyRepeat -float 1
 ```
 
-# Use Mac Keychain for SSH passphraseS
+# Use Mac Keychain for SSH passphrases
 
 Add to `~/.ssh/config`:
 ```
