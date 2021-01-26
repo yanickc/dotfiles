@@ -66,6 +66,13 @@ dotfiles push
 bash .install-oh-my-zsh.sh
 ```
 
+# Faster keyboard repeat rate
+
+```
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+defaults write NSGlobalDomain KeyRepeat -float 1
+```
+
 # brew and Mac software
 https://brew.sh/
 ```
