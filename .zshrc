@@ -18,7 +18,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export EDITOR='vim'
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 
 ######################################################################
@@ -107,7 +106,6 @@ plugins=(
   # fzf-zsh
   zsh-completions
   zsh-autosuggestions
-  poetry
 )
 
 # Brew managed completions
@@ -256,12 +254,6 @@ fi
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
-######################################################################
-# broot lets you explore directory trees and launch commands.                                                   ▐
-# It's best used when launched as br.                                                                           ▐
-# See https://dystroy.org/broot for a complete guide.
-source /Users/yanick/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 # Created by `userpath` on 2020-09-02 21:23:19
 export PATH="$PATH:/Users/yanick/.local/bin"
