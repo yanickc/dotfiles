@@ -125,19 +125,20 @@ Brew cask is an extension to brew that allows management of graphical applicatio
 brew install --cask docker
 brew install --cask macvim
 brew install --cask vnc-viewer
-brew install --cask sourcetree 
+brew install --cask sourcetree          # Git gui
 brew install --cask visual-studio-code
 brew install --cask jetbrains-toolbox
 brew install --cask firefox
 brew install --cask google-chrome
 brew install --cask 1password
-brew install --cask bitwarden
+brew install --cask bitwarden           # Password manager
 brew install --cask evernote
 brew install --cask slack
 brew install --cask dropbox
-brew install --cask menumeters
-brew install --cask itsycal
+brew install --cask menumeters          # Set of CPU, memory, disk, and network monitoring tools
+brew install --cask itsycal             # Menu bar calendar
 brew install --cask gpg-suite
+brew install --cask lunar               # Adaptive brightness for external displays
 
 # Personal VPN
 brew install --cask purevpn
