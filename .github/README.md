@@ -139,6 +139,7 @@ brew install --cask menumeters          # Set of CPU, memory, disk, and network 
 brew install --cask itsycal             # Menu bar calendar
 brew install --cask gpg-suite
 brew install --cask lunar               # Adaptive brightness for external displays
+brew install --cask cyberdu             # Server and cloud storage browser, sftp, scp, ...
 
 # Personal VPN
 brew install --cask purevpn
