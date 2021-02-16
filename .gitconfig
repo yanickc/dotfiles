@@ -55,5 +55,6 @@
     diffFilter = delta --color-only
     
 [user]
+    name = Yanick Chénard
 	email = 600694+yanickc@users.noreply.github.com
 	signingkey = 73A6D1CD
